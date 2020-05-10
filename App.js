@@ -5,8 +5,10 @@ import LoadingScreen from './screens/LoadingScreen'
 import LoginScreen from './screens/LoginScreen'
 import RegisterScreen from './screens/RegisterScreen'
 import HomeScreen from './screens/HomeScreen'
+import ForgetPasswordScreen from './screens/ForgetPasswordScreen'
 
 import * as firebase from 'firebase'
+
 
 var firebaseConfig = {
   apiKey: "AIzaSyCtSeV7jaAb_NF3FTGS3BGYeE948C8LNgs",
@@ -27,7 +29,8 @@ const AppStack = createStackNavigator({
 
 const AuthStack = createStackNavigator({
   Login: LoginScreen, 
-  Register: RegisterScreen
+  Register: RegisterScreen,
+  ForgetPassword: ForgetPasswordScreen 
 })
 
 export default createAppContainer(
