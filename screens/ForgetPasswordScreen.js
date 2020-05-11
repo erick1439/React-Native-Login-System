@@ -9,10 +9,11 @@ export default class ForgetPasswordScreen extends React.Component {
   }
 
   handleforgotPassword = () => {
-    firebase.auth().sendPasswordResetEmail(this.state.email)
-      .then(function (user) {
-        alert('Please check your email...')
-      }).catch(error => this.setState({errorMessage: error.message}));
+    firebase
+      .auth()
+      .sendPasswordResetEmail(this.state.email)
+      .then(() =>  {alert('Please check your email...')})
+      .catch(error => this.setState({errorMessage: error.message}));
   }
 
   render() {
